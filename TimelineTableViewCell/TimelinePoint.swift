@@ -64,6 +64,6 @@ public struct TimelinePoint {
         shapeLayer.fillColor = isFilled ? color.cgColor : UIColor.white.cgColor
         shapeLayer.lineWidth = lineWidth
 
-        view.layer.addSublayer(shapeLayer)
+        view.layer.insertSublayer((shapeLayer), at: 0)
     }
 }

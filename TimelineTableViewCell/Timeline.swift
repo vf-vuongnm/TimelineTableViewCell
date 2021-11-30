@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public struct Timeline {
-    public var width: CGFloat = 2.0 {
+    public var width: CGFloat = 1.0 {
         didSet {
             if (width < 0.0) {
                 width = 0.0
@@ -18,9 +18,9 @@ public struct Timeline {
         }
     }
     
-    public var (frontColor, backColor) = (UIColor.black, UIColor.black)
+    public var (frontColor, backColor) = (UIColor.systemGray, UIColor.systemGray)
     
-    public var leftMargin: CGFloat = 80.0
+    public var leftMargin: CGFloat = 0
     
     internal var (start, middle, end) = (CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 0), CGPoint(x: 0, y: 0))
     
@@ -32,11 +32,11 @@ public struct Timeline {
     }
     
     public init(frontColor: UIColor, backColor: UIColor) {
-        self.init(width: 2, frontColor: frontColor, backColor: backColor)
+        self.init(width: 1, frontColor: frontColor, backColor: backColor)
     }
     
     public init() {
-        self.init(width: 2, frontColor: UIColor.black, backColor: UIColor.black)
+        self.init(width: 1, frontColor: UIColor.systemGray, backColor: UIColor.systemGray)
     }
     
     public func draw(view: UIView) {
@@ -58,6 +58,6 @@ fileprivate extension Timeline {
         shapeLayer.lineWidth = width
         shapeLayer.lineCap = .round
 
-        view.layer.addSublayer(shapeLayer)
+        view.layer.insertSublayer(shapeLayer, at: 0)
     }
 }
