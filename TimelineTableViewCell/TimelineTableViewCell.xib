@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Od-hl-ENS">
-                                <rect key="frame" x="108" y="24" width="228" height="14.5"/>
+                                <rect key="frame" x="108" y="24" width="25" height="14.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,18 +47,26 @@
                                     <constraint firstAttribute="width" constant="32" id="of4-tW-Pc8"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bf-9n-9oE">
+                                <rect key="frame" x="133" y="24" width="215" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LWm-f0-Lj3" firstAttribute="leading" secondItem="4Od-hl-ENS" secondAttribute="leading" id="1ek-dM-IlG"/>
                             <constraint firstAttribute="trailing" secondItem="LWm-f0-Lj3" secondAttribute="trailing" constant="20" id="5VQ-Bo-2kp"/>
                             <constraint firstItem="W66-Ck-wDF" firstAttribute="centerY" secondItem="aFP-zW-cVP" secondAttribute="centerY" id="EZA-8x-jzo"/>
+                            <constraint firstItem="2bf-9n-9oE" firstAttribute="centerY" secondItem="4Od-hl-ENS" secondAttribute="centerY" id="Glg-N9-Ody"/>
+                            <constraint firstItem="2bf-9n-9oE" firstAttribute="leading" secondItem="4Od-hl-ENS" secondAttribute="trailing" id="QGo-Eg-J1n"/>
                             <constraint firstItem="aFP-zW-cVP" firstAttribute="leading" secondItem="W66-Ck-wDF" secondAttribute="trailing" constant="8" id="WIt-yf-Xlk"/>
                             <constraint firstItem="LWm-f0-Lj3" firstAttribute="top" secondItem="4Od-hl-ENS" secondAttribute="bottom" constant="4" id="Ytc-ti-3QV"/>
                             <constraint firstItem="aFP-zW-cVP" firstAttribute="top" secondItem="l2n-OZ-Eu0" secondAttribute="top" constant="24" id="Z4z-yP-Gep"/>
                             <constraint firstItem="4Od-hl-ENS" firstAttribute="leading" secondItem="aFP-zW-cVP" secondAttribute="trailing" constant="8" symbolic="YES" id="bJE-QD-FvN"/>
-                            <constraint firstAttribute="trailing" secondItem="4Od-hl-ENS" secondAttribute="trailing" constant="20" id="gfA-Mb-OSI"/>
                             <constraint firstItem="W66-Ck-wDF" firstAttribute="leading" secondItem="l2n-OZ-Eu0" secondAttribute="leading" id="p6B-1V-lY1"/>
+                            <constraint firstAttribute="trailing" secondItem="2bf-9n-9oE" secondAttribute="trailing" constant="8" id="qJU-z8-ThD"/>
                             <constraint firstItem="4Od-hl-ENS" firstAttribute="top" secondItem="aFP-zW-cVP" secondAttribute="top" id="rvc-jR-aW7"/>
                             <constraint firstAttribute="bottom" secondItem="LWm-f0-Lj3" secondAttribute="bottom" constant="24" id="uld-qm-O6T"/>
                         </constraints>
@@ -74,6 +82,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="LWm-f0-Lj3" id="fpE-cB-Cup"/>
+                <outlet property="descriptionOfTitleLabel" destination="2bf-9n-9oE" id="3MR-FU-Ple"/>
                 <outlet property="illustrationImageView" destination="aFP-zW-cVP" id="9AD-3h-Weg"/>
                 <outlet property="imageAndInfoLabelSpaceContraint" destination="WIt-yf-Xlk" id="oN2-ae-Rjn"/>
                 <outlet property="imageTopContraint" destination="Z4z-yP-Gep" id="hc3-SJ-vB0"/>

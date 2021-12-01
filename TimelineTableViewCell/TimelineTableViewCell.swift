@@ -15,6 +15,7 @@ open class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var imageWitdthConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageTopContraint: NSLayoutConstraint!
     
+    @IBOutlet weak open var descriptionOfTitleLabel: UILabel!
     @IBOutlet weak open var titleLabel: UILabel!
     @IBOutlet weak open var descriptionLabel: UILabel!
     @IBOutlet weak open var timeDateLabel: UILabel!
@@ -57,5 +58,7 @@ open class TimelineTableViewCell: UITableViewCell {
         
         timeDateLabel.font = timeDateLabel.font.withSize(hasImage ? 12 : 18)
         timeDateLabel.textColor = hasImage ? UIColor.systemGray : UIColor.darkText
+        
+        
     }
 }
