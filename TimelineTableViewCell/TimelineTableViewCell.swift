@@ -55,10 +55,5 @@ open class TimelineTableViewCell: UITableViewCell {
         if !hasImage {
             timelinePoint.draw(view: self.contentView)
         }
-        
-        timeDateLabel.font = timeDateLabel.font.withSize(hasImage ? 12 : 18)
-        timeDateLabel.textColor = hasImage ? UIColor.systemGray : UIColor.darkText
-        
-        
     }
 }

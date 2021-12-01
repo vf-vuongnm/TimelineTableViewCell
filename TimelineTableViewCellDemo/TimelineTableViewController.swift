@@ -79,7 +79,9 @@ class TimelineTableViewController: UITableViewController {
             cell.descriptionLabel.text = ""
         }
         
-        
+        let hasImage = cell.illustrationImageView.image != nil
+        cell.timeDateLabel.font = cell.timeDateLabel.font.withSize(hasImage ? 12 : 16)
+        cell.timeDateLabel.textColor = hasImage ? UIColor.systemGray : UIColor.darkText
         return cell
     }
 }
